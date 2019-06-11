@@ -23,7 +23,7 @@
         height: auto;
         border-radius: 5px;
         overflow: auto;
-        background: #f1f1f2;
+        background: #fff;
         margin-bottom: 30px;
 
         .img-post {
@@ -38,6 +38,8 @@
 
         .post-text {
             padding: 55px 10px 10px 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
         }
 
         .comments {
