@@ -14,7 +14,8 @@ class Posts extends Component {
         return (
             <div className="container">
                 <Menu
-                    getData={this.props.getPosts} />
+                    getData={this.props.getPosts}
+                />
                 <div className="posts-holder">
                     <div className="row">
                         {this.props.loader ?
