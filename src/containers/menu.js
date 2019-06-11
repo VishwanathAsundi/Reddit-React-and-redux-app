@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
 class Menu extends Component {
-
     render() {
-
         return (
             <nav class="navbar navbar-expand-sm bg-light">
                 <ul class="navbar-nav btn-group-margin">
@@ -30,7 +28,6 @@ class Menu extends Component {
                         <button type="buttton" className="btn btn-primary"
                             onClick={(e) => this.props.getData("cats")}>Cats</button>
                     </li>
-
                 </ul>
             </nav>
         )

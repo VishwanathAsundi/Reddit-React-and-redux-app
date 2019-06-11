@@ -35,38 +35,34 @@ class Posts extends Component {
                                                             <i class="far fa-comment"></i>
                                                             <span> {post.data.num_comments}</span>
                                                         </li>
-                                                        <li><i class="far fa-thumbs-up"></i><span> {post.data.ups}</span></li>
-                                                        <li><i class="far fa-thumbs-down"></i><span> {post.data.downs} </span></li>
+                                                        <li>
+                                                            <i class="far fa-thumbs-up"></i>
+                                                            <span> {post.data.ups}</span></li>
+                                                        <li>
+                                                            <i class="far fa-thumbs-down"></i>
+                                                            <span> {post.data.downs} </span>
+                                                        </li>
                                                     </ul>
                                                 </div>
-
                                             </div>
-
                                         </div>
                                         <div className="post-text">
                                             <p>{post.data.title}</p>
                                         </div>
-
-
                                     </div>
-
                                     : ''
                             })}
-
                     </div>
-
-
                 </div>
             </div>
         )
     }
 }
 Posts.propType = {
-    postData: PropTypes.array
+    postData: PropTypes.array,
+    loader: PropTypes.boolean
 }
-
 const mapStateToProps = state => {
-    console.log(state.postData);
     return {
         postData: state.postData,
         loader: state.loader

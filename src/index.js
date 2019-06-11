@@ -12,10 +12,13 @@ import { createStore, applyMiddleware, compose } from 'redux';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, {}, composeEnhancers(applyMiddleware(thunk, logger)));
-// store.subscibe(() => {
-//     console.log("Afetr change", store.getState());
-// })
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
