@@ -3,6 +3,7 @@ import Menu from './menu';
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import { fetchData } from '../store/actions/index';
+import isImageUrl from 'is-image-url';
 
 
 class Posts extends Component {
@@ -18,13 +19,13 @@ class Posts extends Component {
                     <div className="row">
                         {this.props.loader ?
                             <div className="loader mx-auto">
-                                <img src="/images/Spinner-1s-200px.gif" alt="loader image" />
+                                <img src="/images/Spinner-1s-200px.gif" alt="img-redundant-alt" />
                                 <p>Loading please wait...</p>
                             </div>
                             :
                             (this.props.postData) && this.props.postData.map((post, i) => {
                                 console.log(post.data.url);
-                                return (post.data.url !== undefined) ?
+                                return (isImageUrl(post.data.url)) ?
                                     <div key={i} className="each-post">
                                         <div className="img-post">
                                             <div className="image-box">
@@ -32,14 +33,14 @@ class Posts extends Component {
                                                 <div className="comments">
                                                     <ul>
                                                         <li>
-                                                            <i class="far fa-comment"></i>
+                                                            <i className="far fa-comment"></i>
                                                             <span> {post.data.num_comments}</span>
                                                         </li>
                                                         <li>
-                                                            <i class="far fa-thumbs-up"></i>
+                                                            <i className="far fa-thumbs-up"></i>
                                                             <span> {post.data.ups}</span></li>
                                                         <li>
-                                                            <i class="far fa-thumbs-down"></i>
+                                                            <i className="far fa-thumbs-down"></i>
                                                             <span> {post.data.downs} </span>
                                                         </li>
                                                     </ul>
