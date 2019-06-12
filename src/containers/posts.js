@@ -25,7 +25,6 @@ class Posts extends Component {
                             </div>
                             :
                             (this.props.postData) && this.props.postData.map((post, i) => {
-                                console.log(post.data.url);
                                 return (isImageUrl(post.data.url)) ?
                                     <div key={i} className="each-post">
                                         <div className="img-post">
