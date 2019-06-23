@@ -29,7 +29,7 @@ class Posts extends Component {
                                     <div key={i} className="each-post">
                                         <div className="img-post">
                                             <div className="image-box">
-                                                <div style={{ backgroundImage: `url(${post.data.url})`, width: '100%', height: '200px', backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}></div>
+                                                <div style={{ backgroundImage: `url(${post.data.url})`, width: '100%', height: '400px', backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}></div>
                                                 <div className="comments">
                                                     <ul>
                                                         <li>
